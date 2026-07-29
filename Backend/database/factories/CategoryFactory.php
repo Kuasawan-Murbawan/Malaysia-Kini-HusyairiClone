@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 /**
  * @extends Factory<Category>
@@ -17,9 +18,12 @@ class CategoryFactory extends Factory
      */
     public function definition(): array
     {
+        $name = fake()->unique()->randomElement(['Yoursay', 'News', 'Columns', 'Letters']);
+
         return [
-            'name'=> fake()->unique()->randomElement(['yoursay', 'news', 'columns', 'letters']),
-            'description' => fake()->sentence(10)
+            'name'          => $name,
+            'description'   => fake()->sentence(10),
+            'slug'          => Str::slug($name),
         ];
     }
 }
