@@ -26,14 +26,14 @@ class StoryFactory extends Factory
             'title'          => $title,
             'slug'           => Str::slug($title) . '-' . fake()->unique()->numberBetween(1000, 999999),
             'image'          => fake()->imageUrl(640, 480, 'news', true),
-            'category_id'    => Category::inRandomOrder()->first()?->id ?? Category::factory(),
-            // explain this
+            'category_id'    => Category::inRandomOrder()->first()?->id,
             'date_published' => fake()->dateTimeBetween('-1 year', 'now'),
-            'comment_count'  => fake()->numberBetween(0, 100),
+//            'comment_count'  => fake()->numberBetween(0, 100), // should be based on Comment table
             'language'       => fake()->randomElement(['en', 'ms', 'zh']),
-            'link'           => fake()->url() . '?id=' . fake()->unique()->uuid(),
+            'link'           => fake()->unique()->url(),
             'summary'        => fake()->paragraph(2),
-            'author_id'      => Author::factory(), // Automatically creates or attaches an Author
+            'author_id'      => fake()->boolean(70) ? Author::inRandomOrder()->first()?->id : null,
+            // only 70% of stories generated attach to existing author, others are null author
             'full_story'     => fake()->paragraphs(5, true),
         ];
     }
