@@ -20,10 +20,11 @@ return new class extends Migration
             $table->dateTime('date_published');
             $table->integer('comment_count')->default(0);
             $table->string('language'); // en, bm
-            $table->string('link');
+            $table->string('link')->unique();
             $table->text('summary');
             $table->foreignId('author_id')->nullable()->constrained(); // stories can have 0 author
             $table->text('full_story');
+            $table->string('slug');
         });
     }
 
