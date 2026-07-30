@@ -17,13 +17,23 @@ class CategoryFactory extends Factory
      * @return array<string, mixed>
      */
     public function definition(): array
-    {
-        $name = fake()->unique()->randomElement(['Yoursay', 'News', 'Columns', 'Letters']);
+        {
+        $categories = [
+            'News'     => 'Breaking news and current affairs from around Malaysia.',
+            'Columns' => 'In-depth analysis and commentary from columnists and contributors.',
+            'Letters'  => 'Letters submitted by readers on issues that matter to them.',
+            'Yoursay'  => 'Reader-submitted reactions and opinions on the day\'s top stories.',
+        ];
+
+        static $index = 0;
+        $names = array_keys($categories);
+        $name = $names[$index % count($names)];
+        $index++;
 
         return [
-            'name'          => $name,
-            'description'   => fake()->sentence(10),
-            'slug'          => Str::slug($name),
+            'name'        => $name,
+            'slug'        => Str::slug($name),
+            'description' => $categories[$name],
         ];
     }
 }

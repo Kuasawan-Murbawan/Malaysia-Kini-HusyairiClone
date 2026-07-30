@@ -25,7 +25,7 @@ class StoryFactory extends Factory
         return [
             'title'          => $title,
             'slug'           => Str::slug($title) . '-' . fake()->unique()->numberBetween(1000, 999999),
-            'image'          => fake()->imageUrl(640, 480, 'news', true),
+            'image' => 'https://picsum.photos/seed/' . Str::random(10) . '/640/480',
             'category_id'    => Category::inRandomOrder()->first()?->id,
             'date_published' => fake()->dateTimeBetween('-1 year', 'now'),
 //            'comment_count'  => fake()->numberBetween(0, 100), // should be based on Comment table

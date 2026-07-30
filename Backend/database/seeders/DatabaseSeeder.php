@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
 
          Tag::factory(10)->create();
 
-         $stories = Story::factory(30)->create();
+         $stories = Story::factory(50)->create();
 
          $stories->each(function ($story){
              // Attach random tag (many-yo-many)
