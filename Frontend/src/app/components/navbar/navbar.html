@@ -1,0 +1,43 @@
+<header class="navbar">
+  <!-- Left section: Menu icon + Language options -->
+  <div class="navbar__left">
+    <!-- <button class="icon-btn" aria-label="Menu">☰</button> -->
+    <button class="icon-btn" (click)="toggleMenu()" aria-label="Menu">☰</button>
+
+    <div class="navbar__lang">
+      <span class="lang-item lang-item--active">EN</span>
+      <span class="lang-item">BM</span>
+      <span class="lang-item">ZH</span>
+      <span class="lang-item">TA</span>
+    </div>
+  </div>
+
+  <!-- Center section: Perfectly centered logo -->
+  <div class="navbar__logo">
+    <span class="logo-mkini">malaysia<span class="logo-kini">kini</span></span>
+    <span class="logo-tagline">news and views that matter</span>
+  </div>
+
+  <!-- Right section: Action buttons -->
+  <div class="navbar__right">
+    <button class="icon-btn" aria-label="Tags">🏷</button>
+    <button class="icon-btn" aria-label="Search">🔍</button>
+    <span class="signin">Sign In</span>
+    <button class="subscribe-btn">Subscribe</button>
+  </div>
+</header>
+
+@if (menuOpen()) {
+  <div class="sidebar-overlay" (click)="toggleMenu()"></div>
+  <aside class="sidebar">
+    @for (group of categories; track group.section) {
+      <div class="sidebar__section-label">{{ group.section }}</div>
+      @for (item of group.items; track item.label) {
+        <button class="sidebar__item" (click)="selectCategory(item.slug)">
+          {{ item.label }}
+          <span class="arrow">→</span>
+        </button>
+      }
+    }
+  </aside>
+}

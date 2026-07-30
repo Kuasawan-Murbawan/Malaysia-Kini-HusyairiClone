@@ -1,0 +1,9 @@
+@if (loading()) {
+  <p>Loading...</p>
+} @else {
+  <div class="news-grid">
+    @for (story of stories(); track story.id) {
+      <app-news-card [story]="story"></app-news-card>
+    }
+  </div>
+}

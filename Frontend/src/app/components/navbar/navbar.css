@@ -1,0 +1,148 @@
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Creates 3 equal columns */
+  align-items: center;
+  padding: 12px 24px;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+}
+
+/* Left Section */
+.navbar__left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-self: start;
+}
+
+.navbar__lang {
+  display: flex;
+  gap: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.lang-item {
+  color: #999;
+  cursor: pointer;
+}
+
+.lang-item--active {
+  color: #e8720c;
+}
+
+/* Center Section */
+.navbar__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center; /* Ensures exact center alignment */
+}
+
+.logo-mkini {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #2b3a67;
+}
+
+.logo-kini {
+  color: #e8720c;
+}
+
+.logo-tagline {
+  font-size: 0.7rem;
+  color: #999;
+}
+
+/* Right Section */
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-self: end;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.signin {
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.subscribe-btn {
+  background: #e8720c;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Responsive view */
+@media (max-width: 640px) {
+  .navbar__lang,
+  .logo-tagline {
+    display: none;
+  }
+}
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 40;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 280px;
+  background: #fff;
+  z-index: 50;
+  overflow-y: auto;
+  padding-top: 70px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar__section-label {
+  background: #e8720c;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 10px 20px;
+  margin-top: 12px;
+}
+
+.sidebar__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 14px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.sidebar__item:hover {
+  background: #f9f9f9;
+  color: #e8720c;
+}
+
+.arrow {
+  color: #e8720c;
+}
