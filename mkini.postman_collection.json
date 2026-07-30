@@ -1,0 +1,135 @@
+{
+  "info": {
+    "_postman_id": "2d732fc8-f156-410e-b1eb-ec113d5d0d30",
+    "name": "mkini",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "42753199"
+  },
+  "item": [
+    {
+      "name": "GET /api/categories",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/api/categories",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "categories"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getStoryComments",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/api/comments/1",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "comments",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/news/{id}",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/api/news/1",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "news",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/news",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/api/news",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "news"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/news?category=letters",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/api/news?category=letters",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "news"
+          ],
+          "query": [
+            {
+              "key": "category",
+              "value": "letters"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /api/news?category=doesnotexist",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/api/news?category=doesnotexist",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "news"
+          ],
+          "query": [
+            {
+              "key": "category",
+              "value": "doesnotexist"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
