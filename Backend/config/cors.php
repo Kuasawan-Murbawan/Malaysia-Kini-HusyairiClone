@@ -19,7 +19,10 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['*', 'http://localhost:4200'],
+    'allowed_origins' => [  '*',
+                            'http://localhost:4200',
+                            'https://malaysia-kini-husyairi-clone-murex.vercel.app/'
+        ],
 
     'allowed_origins_patterns' => [],
 
