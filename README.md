@@ -95,11 +95,11 @@ This was my first project in Laravel and Angular, coming from a Java Spring Boot
 
 - **Eloquent vs. JPA**: Eloquent relationships felt super familiar coming from JPA. That said, the way Laravel breaks things down—migrations, models, API resources, and pivot tables made setting up the many-to-many tags relationship feel really clean.
 
--**API Resources**: I loved using Laravel API Resources. It’s basically a lightweight way to make DTOs without the heavy template, keeping the database structure separate from what the frontend actually receives.
+- **API Resources**: I loved using Laravel API Resources. It’s basically a lightweight way to make DTOs without the heavy template, keeping the database structure separate from what the frontend actually receives.
 
--**Angular's Signals & Standalone Components**: This was definitely the biggest change compared to React. Importing child components and getting used to signal() and effect() took a minute to wrap my head around.
+- **Angular's Signals & Standalone Components**: This was definitely the biggest change compared to React. Importing child components and getting used to signal() and effect() took a minute to wrap my head around.
 
--**Faker & Seeders**: Having built-in seeders in Laravel was awesome. In Spring Boot, I usually populated dummy data manually or via SQL scripts, so using Faker to quickly generate realistic stories, categories, and authors was super handy.
+- **Faker & Seeders**: Having built-in seeders in Laravel was awesome. In Spring Boot, I usually populated dummy data manually or via SQL scripts, so using Faker to quickly generate realistic stories, categories, and authors was super handy.
 
 ## Known Limitations / Future Work
 
