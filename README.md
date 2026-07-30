@@ -24,6 +24,9 @@ A full-stack news portal built as a skill assessment for AppAsia Berhad, demonst
 Backend/    Laravel API (migrations, models, controllers, resources, seeders/factories)
 Frontend/   Angular application (components, services)
 ```
+### Database Schema
+<img width="932" height="372" alt="mkini-schema drawio" src="https://github.com/user-attachments/assets/4ae8e6ae-9d80-435a-9af3-8d3c777af890" />
+
 
 ## Setup Instructions
 
