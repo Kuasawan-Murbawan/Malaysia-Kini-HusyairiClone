@@ -4,10 +4,32 @@ A full-stack news portal built as a skill assessment for AppAsia Berhad, demonst
 
 - Notion page for what i've learned from this assessment -> [Husyairi-Kini Learn](https://app.notion.com/p/Malaysiakini-News-Portal-Clone-3abff1b725488058859bd2ed796cc388?source=copy_link).
 
+## Live Demo
+
+- Frontend: https://malaysia-kini-husyairi-clone-murex.vercel.app/
+- Backend API: https://malaysia-kini-husyairiclone-production.up.railway.app/api
+
+### API Testing via Postman
+
+The backend API is live on Railway and ready to test without any local environment setup:
+
+- **Live Base URL:** `https://malaysia-kini-husyairiclone-production.up.railway.app/api`
+- **Postman Collection:** [Download / Import `mkini.postman_collection.json`](./mkini.postman_collection.json)
+
+#### How to import into Postman:
+1. Download `mkini.postman_collection.json` from this repo.
+2. Open Postman $\rightarrow$ Click **Import** (top left).
+3. Drag & drop the file into Postman to load all 6 pre-configured requests.
+
 ## Tech Stack
 
 **Backend:** Laravel, MySQL, Eloquent ORM
+
 **Frontend:** Angular (v22), TypeScript, RxJS, Signals
+
+**Deployment & Hosting:** Railway (Backend API & Database), Vercel (Frontend SPA)
+
+**API Testing:** Postman
 
 ## Features
 
@@ -25,7 +47,7 @@ Backend/    Laravel API (migrations, models, controllers, resources, seeders/fac
 Frontend/   Angular application (components, services)
 ```
 ### Database Schema
-<img width="932" height="372" alt="mkini-schema drawio" src="https://github.com/user-attachments/assets/4ae8e6ae-9d80-435a-9af3-8d3c777af890" />
+<img width="932" height="372" alt="mkini-schema drawio" src="https://github.com/user-attachments/assets/5c0a76f1-071c-4189-b817-e62b3265caf6" />
 
 
 ## Setup Instructions
@@ -38,15 +60,13 @@ Frontend/   Angular application (components, services)
 
 ### Database (MySQL)
 
-Before running migrations, create an empty MySQL database (name it whatever you like, 
-e.g. `mkini_portal`):
+Before running migrations, create an empty MySQL database (e.g. `mkini_portal`):
 
 ```bash
 mysql -u root -p -e "CREATE DATABASE mkini_portal;"
 ```
 
-Or, if you prefer a GUI tool (TablePlus, MySQL Workbench, phpMyAdmin, etc.), simply 
-create a new empty database through the interface.
+
 
 ### Backend (Laravel)
 
@@ -112,7 +132,7 @@ This was my first project in Laravel and Angular, coming from a Java Spring Boot
 
 - **Eloquent vs. JPA**: Eloquent relationships felt super familiar coming from JPA. That said, the way Laravel breaks things down—migrations, models, API resources, and pivot tables made setting up the many-to-many tags relationship feel really clean.
 
-- **API Resources**: I loved using Laravel API Resources. It’s basically a lightweight way to make DTOs without the heavy template, keeping the database structure separate from what the frontend actually receives.
+- **API Resources**: I loved using Laravel API Resources. It’s basically an easier way to make DTOs without the heavy template, keeping the database structure separate from what the frontend actually receives.
 
 - **Angular's Signals & Standalone Components**: This was definitely the biggest change compared to React. Importing child components and getting used to signal() and effect() took a minute to wrap my head around.
 
@@ -121,7 +141,6 @@ This was my first project in Laravel and Angular, coming from a Java Spring Boot
 ## Known Limitations / Future Work
 
 - **Pagination**: currently returns a fixed page of results; currently only have 25 news in a page, so extending this to full pagination controls (page numbers, page size configuration).
-- **Deployment**: currently runs locally. Next step is deploying the Laravel API to Railway or Render, and the Angular frontend to Vercel.
 
 ## A Note on AI Assistance
 
