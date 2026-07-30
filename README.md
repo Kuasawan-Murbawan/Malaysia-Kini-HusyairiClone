@@ -33,6 +33,18 @@ Frontend/   Angular application (components, services)
 - Node.js 20+ and npm
 - MySQL (running locally, with a database created for this project)
 
+### Database (MySQL)
+
+Before running migrations, create an empty MySQL database (name it whatever you like, 
+e.g. `mkini_portal`):
+
+```bash
+mysql -u root -p -e "CREATE DATABASE mkini_portal;"
+```
+
+Or, if you prefer a GUI tool (TablePlus, MySQL Workbench, phpMyAdmin, etc.), simply 
+create a new empty database through the interface.
+
 ### Backend (Laravel)
 
 ```bash
