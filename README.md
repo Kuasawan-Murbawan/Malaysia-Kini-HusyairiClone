@@ -2,6 +2,8 @@
 
 A full-stack news portal built as a skill assessment for AppAsia Berhad, demonstrating backend API development in Laravel and frontend in Angular. The design is inspired by [Malaysiakini's news listing page](https://www.malaysiakini.com/my/latest/news).
 
+- Notion page for what i've learned from this assessment -> [Husyairi-Kini Learn](https://app.notion.com/p/Malaysiakini-News-Portal-Clone-3abff1b725488058859bd2ed796cc388?source=copy_link).
+
 ## Tech Stack
 
 **Backend:** Laravel, MySQL, Eloquent ORM
@@ -105,3 +107,15 @@ This was my first project in Laravel and Angular, coming from a Java Spring Boot
 
 - **Pagination**: currently returns a fixed page of results; currently only have 25 news in a page, so extending this to full pagination controls (page numbers, page size configuration).
 - **Deployment**: currently runs locally. Next step is deploying the Laravel API to Railway or Render, and the Angular frontend to Vercel.
+
+## A Note on AI Assistance
+
+I used Claude (Anthropic) throughout this project, primarily as a learning aid since 
+this was my first time working with Laravel and Angular as my prior experience is with 
+Java Spring Boot and React. I used it to understand framework-specific concepts (Eloquent 
+relationships, Angular's signal-based reactivity, standalone components), get feedback on 
+my schema and code as I wrote it, and debug issues as they came up.
+
+All architectural decisions (data model, relationships, API design, scope trade-offs like 
+skipping pagination) were mine, and I can walk through and explain any part of the codebase 
+in detail.
