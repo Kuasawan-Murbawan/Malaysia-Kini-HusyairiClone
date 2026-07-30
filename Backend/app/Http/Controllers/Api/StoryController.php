@@ -27,7 +27,7 @@ class StoryController extends Controller
                 $q->whereHas('category', fn ($cq) => $cq->where('slug', $slug));
             })
             ->latest('date_published')
-            ->paginate(10);
+            ->paginate(25);
 
         return StoryListResource::collection($stories);
     }
